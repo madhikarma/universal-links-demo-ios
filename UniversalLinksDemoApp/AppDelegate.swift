@@ -10,34 +10,28 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        true
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options _: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_: UIApplication, didDiscardSceneSessions _: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let navigationController = UINavigationController(rootViewController: ViewController())
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        return true
     }
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         // 1
-//        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
-//            if let url = userActivity.webpageURL,
-//                let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
-//
-//                // TODO check path for vc
-//                let redViewController = RedViewController(text: components.path)
-//
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            if let url = userActivity.webpageURL,
+                let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
+
+                // TODO check path for vc
+                let redViewController = RedViewController(text: components.path)
+
+                // iOS 13 scene
 //                guard let sceneDelegate = application.connectedScenes.first?.delegate as? UIWindowSceneDelegate else {
 //                    fatalError("Expected scene delegate")
 //                }
@@ -45,28 +39,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                guard let navigationController = sceneDelegate.window??.rootViewController as? UINavigationController else {
 //                    fatalError("Expected navigation controller")
 //                }
-//                navigationController.pushViewController(redViewController, animated: true)
-//                return true
-//            }
-//        }
+                
+                // iOS < 13 app delegate
+                guard let navigationController = window?.rootViewController as? UINavigationController else {
+                    fatalError("Expected navigation controller")
+                }
 
-        // TODO check path for vc
-        let redViewController = RedViewController(text: "")
-        
-        guard let sceneDelegate = application.connectedScenes.first?.delegate as? UIWindowSceneDelegate else {
-            fatalError("Expected scene delegate")
+                navigationController.pushViewController(redViewController, animated: true)
+                return true
+            }
         }
-        
-        guard let navigationController = sceneDelegate.window??.rootViewController as? UINavigationController else {
-            fatalError("Expected navigation controller")
-        }
-        navigationController.pushViewController(redViewController, animated: true)
-        return true
-
         
 //        if let webpageUrl = URL(string: "https://universal-links-demo.com") {
 //            application.open(webpageUrl)
-//
 //        }
         return false
     }

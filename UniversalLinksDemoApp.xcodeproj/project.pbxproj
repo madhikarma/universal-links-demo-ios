@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AA94E6E82451194800C2E36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94E6E72451194800C2E36E /* AppDelegate.swift */; };
-		AA94E6EA2451194800C2E36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94E6E92451194800C2E36E /* SceneDelegate.swift */; };
 		AA94E6EC2451194800C2E36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94E6EB2451194800C2E36E /* ViewController.swift */; };
 		AA94E6F12451194900C2E36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA94E6F02451194900C2E36E /* Assets.xcassets */; };
 		AA94E6F42451194900C2E36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA94E6F22451194900C2E36E /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		AA94E6E42451194800C2E36E /* UniversalLinksDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalLinksDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA94E6E72451194800C2E36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA94E6E92451194800C2E36E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AA94E6EB2451194800C2E36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA94E6F02451194900C2E36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA94E6F32451194900C2E36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			children = (
 				AA94E6FB24511A3600C2E36E /* UniversalLinksDemoApp.entitlements */,
 				AA94E6E72451194800C2E36E /* AppDelegate.swift */,
-				AA94E6E92451194800C2E36E /* SceneDelegate.swift */,
 				AA94E6FC24511D5300C2E36E /* RedViewController.swift */,
 				AA94E6EB2451194800C2E36E /* ViewController.swift */,
 				AA94E6F02451194900C2E36E /* Assets.xcassets */,
@@ -142,7 +139,6 @@
 				AA94E6FD24511D5300C2E36E /* RedViewController.swift in Sources */,
 				AA94E6EC2451194800C2E36E /* ViewController.swift in Sources */,
 				AA94E6E82451194800C2E36E /* AppDelegate.swift in Sources */,
-				AA94E6EA2451194800C2E36E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +156,82 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AA1B99FA24516BC300EACDCB /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Adhoc;
+		};
+		AA1B99FB24516BC300EACDCB /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UniversalLinksDemoApp/UniversalLinksDemoApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Shagun Madhikarmi (YE754YUBD2)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = YE754YUBD2;
+				INFOPLIST_FILE = UniversalLinksDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.universal-links-demo.UniversalLinksDemoApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Universal Links Demo App Ad Hoc Profile";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Adhoc;
+		};
 		AA94E6F62451194900C2E36E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -279,16 +351,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UniversalLinksDemoApp/UniversalLinksDemoApp.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development: Shagun Madhikarmi (Q36N36K58Z)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YE754YUBD2;
 				INFOPLIST_FILE = UniversalLinksDemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.universal-links-demo.UniversalLinksDemoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Universal Links Demo App Dev Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,16 +373,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UniversalLinksDemoApp/UniversalLinksDemoApp.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Shagun Madhikarmi (YE754YUBD2)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YE754YUBD2;
 				INFOPLIST_FILE = UniversalLinksDemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.universal-links-demo.UniversalLinksDemoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Universal Links Demo App App Store Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,6 +398,7 @@
 			buildConfigurations = (
 				AA94E6F62451194900C2E36E /* Debug */,
 				AA94E6F72451194900C2E36E /* Release */,
+				AA1B99FA24516BC300EACDCB /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -331,6 +408,7 @@
 			buildConfigurations = (
 				AA94E6F92451194900C2E36E /* Debug */,
 				AA94E6FA2451194900C2E36E /* Release */,
+				AA1B99FB24516BC300EACDCB /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
