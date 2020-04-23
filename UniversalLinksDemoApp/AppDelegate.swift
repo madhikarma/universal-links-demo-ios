@@ -28,4 +28,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+
+    func application(
+        _ application: UIApplication,
+        continue userActivity: NSUserActivity,
+        restorationHandler _: @escaping ([UIUserActivityRestoring]?
+        ) -> Void
+    ) -> Bool {
+        // 1
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            if let url = userActivity.webpageURL,
+                let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
+                
+                // TODO check path for vc
+                let redViewController = RedViewController(text: components.path)
+                
+                guard let sceneDelegate = application.connectedScenes.first?.delegate as? UIWindowSceneDelegate else {
+                    fatalError("Expected scene delegate")
+                }
+                
+                guard let navigationController = sceneDelegate.window??.rootViewController as? UINavigationController else {
+                    fatalError("Expected navigation controller")
+                }
+                navigationController.pushViewController(redViewController, animated: true)
+                return true
+            }
+        }
+        
+//        if let webpageUrl = URL(string: "https://universal-links-demo.com") {
+//            application.open(webpageUrl)
+//
+//        }
+        return false
+    }
 }
