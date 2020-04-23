@@ -18,9 +18,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        let navigationController = UINavigationController(rootViewController: ViewController())
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+//        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            let redViewController = RedViewController(text: "")
+//            navigationController.pushViewController(redViewController, animated: true)
+//        }
     }
 
     func sceneDidDisconnect(_: UIScene) {
