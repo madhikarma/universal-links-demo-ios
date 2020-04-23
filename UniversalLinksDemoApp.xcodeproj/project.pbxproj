@@ -24,6 +24,7 @@
 		AA94E6F02451194900C2E36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA94E6F32451194900C2E36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA94E6F52451194900C2E36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA94E6FB24511A3600C2E36E /* UniversalLinksDemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UniversalLinksDemoApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		AA94E6E62451194800C2E36E /* UniversalLinksDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				AA94E6FB24511A3600C2E36E /* UniversalLinksDemoApp.entitlements */,
 				AA94E6E72451194800C2E36E /* AppDelegate.swift */,
 				AA94E6E92451194800C2E36E /* SceneDelegate.swift */,
 				AA94E6EB2451194800C2E36E /* ViewController.swift */,
@@ -284,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UniversalLinksDemoApp/UniversalLinksDemoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YE754YUBD2;
 				INFOPLIST_FILE = UniversalLinksDemoApp/Info.plist;
@@ -302,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UniversalLinksDemoApp/UniversalLinksDemoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YE754YUBD2;
 				INFOPLIST_FILE = UniversalLinksDemoApp/Info.plist;
