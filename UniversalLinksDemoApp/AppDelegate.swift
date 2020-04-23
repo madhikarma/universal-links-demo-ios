@@ -22,13 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    // Note. this will only work if you target < iOS 13 else you should use the SceneDelegate equivalent
+    // See https://stackoverflow.com/questions/58214733/application-continue-useractivity-method-not-called-in-ios-13
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         // 1
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             if let url = userActivity.webpageURL,
                 let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
 
-                // TODO check path for vc
+                // TODO: check path for vc nad make th demo dymaic
                 let redViewController = RedViewController(text: components.path)
 
                 // iOS 13 scene
